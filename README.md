@@ -12,4 +12,4 @@
 * 以及一个大老爷们的__卖萌__记录
 
 
-![image](https://github.com/TOKdawn/Daily_record/maimeng.jpeg)
+![image](https://github.com/TOKdawn/Daily_record/blob/master/maimeng.jpeg)
