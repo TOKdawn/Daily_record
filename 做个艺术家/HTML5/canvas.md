@@ -12,6 +12,7 @@
 	常用方法
 	context.fillStyle填充风格主要是颜色
 	context.fillRect(0,0,150,75)填充的位置前两位是坐标,后两位是长度和宽
+	context.clearRect(0,0,150,75)擦除
 	context.moveTo(110,0);光标移动到指定坐标
 	context.lineTo(110,100);连线到某坐标
 	context.stroke();对已经设定的移动轨迹进行绘制
@@ -20,3 +21,8 @@
 	ctx.font();设置字体风格
 	fillText(text,x,y) - 在 canvas 上绘制实心的文本
 	strokeText(text,x,y) - 在 canvas 上绘制空心的文本
+	setlnterval(function_name,Time);隔若干秒执行一次函数
+	
+	
+	##data URL 
+	canvas API 
