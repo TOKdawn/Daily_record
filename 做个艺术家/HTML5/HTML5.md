@@ -9,7 +9,6 @@
 			<header>头</header>
 			<nav>导航链接</nav>
 			<article>页面中不相关的额外内容</aryicle>
-			<setior>页面中的一块内容区块,比如页眉或页脚</steior>
 			<aside>跟内容有关的附加说明</aside>
 			<fooder>尾</fooder>
 			<figure>附加内容<figcaption>内容标题</figcaption></figure>
