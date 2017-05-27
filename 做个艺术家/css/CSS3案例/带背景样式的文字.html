@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    section {
+        position: relative;/*关键*/
+        display: inline-block;
+        padding: .5em 1em;
+        border: 0; margin: .5em;
+        background: transparent;
+        color: white;
+        text-transform: uppercase;
+        text-decoration: none;
+        font: bold 200%/1 sans-serif;
+    }
+
+    section::before {
+        content: ''; /* To generate the box */
+        position: absolute;/*关键*/
+        top: 0; right: 0; bottom: 0; left: 0;
+        z-index: -1;/*防止挡文字*/
+        background: #58a;
+        transform: skew(45deg);
+    }
+</style>
+<body>
+    <section>
+        朱博泰
+    </section>
+
+</body>
+</html>
