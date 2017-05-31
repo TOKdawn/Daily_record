@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片边框</title>
+</head>
+<style>
+    section{
+        width: 10em;
+        height: 5em;
+        padding: 1em;
+        border: 1em solid transparent;/*transparent透明*/
+        background: linear-gradient(white,white),url(./bg.jpg);
+        background-size: cover;
+        background-clip: padding-box,border-box;
+        background-origin: border-box;
+    }
+
+    @keyframes ants { to { background-position: 100% 100% } }
+
+    div {
+        padding: 1em;
+        border: 1px solid transparent;
+        background: linear-gradient(white, white) padding-box,
+        repeating-linear-gradient(-45deg, black 0, black 25%, transparent 0, transparent 50%) 0 / .6em .6em;
+        animation: ants 12s linear infinite;
+
+        max-width: 20em;
+        font: 100%/1.6 Baskerville, Palatino, serif;
+    }
+
+</style>
+
+<body>
+<section>
+    这里是一些文字
+</section>
+<div>
+    dddddddddddddddddddd
+</div>
+
+</body>
+</html>
