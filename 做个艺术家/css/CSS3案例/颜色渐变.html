@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>颜色渐变</title>
+</head>
+<style>
+
+    .tinted-image {
+        width: 640px; height: 440px;
+        background-size: cover;
+        background-color: hsl(325, 100%, 50%);
+        background-blend-mode: luminosity;
+        transition: 5s background-color;
+    }
+
+    .tinted-image:hover {
+        background-color: transparent;
+    }
+    img {
+        max-width: 640px;
+        transition: 1s filter, 1s -webkit-filter;
+        -webkit-filter: sepia() saturate(4) hue-rotate(5deg);
+        filter: sepia() saturate(10) hue-rotate(5deg);
+    }
+
+    img:hover,
+    img:focus {
+        -webkit-filter: none;
+        filter: none;
+    }
+</style>
+<body>
+<div style="background-image:url(./img1.jpg)" class="tinted-image"></div>
+<img src="./bg.jpg">
+</body>
+</html>
