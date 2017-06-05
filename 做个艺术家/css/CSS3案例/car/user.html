@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>sss</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <style>
     html,body {
@@ -27,7 +27,8 @@
                 radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
         background-color:#282828;
         background-size:16px 16px;
-        padding-top: .5em;
+        padding-top: .7em;
+        height: 13.1em;
 
     }
     aside >div{
@@ -55,6 +56,7 @@
          border-radius:20px;
          padding: 3px;
          border: #FFFFFF solid 2px;
+         height: 1.3em;
 
      }
      header >p{
@@ -63,6 +65,7 @@
          width: 100%;
          margin: .7em auto;
          color: #FFFFFF;
+         height: 1em;
      }
     aside{
         margin-top: .7em;
@@ -91,7 +94,7 @@
     section > article{
         width: 31.33%;
         display: block;
-        height: 11em;
+        height: 16em;
         background-color: #FFFFFF;
         float: left;
         margin: 1%;
@@ -136,6 +139,15 @@
     </article>
 </section>
 
+<script>
+    var windo_h=document.documentElement.clientHeight;
+    var article_h=(windo_h-16.1*13)/2;
+    alert(article_h);
+    var articles=document.getElementsByTagName('article');
 
+    for(var i in articles){
+        articles[i].style.height=article_h+"px";
+    }
+</script>
 </body>
 </html>

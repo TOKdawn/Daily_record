@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    @keyframes typing {
+        from { width: 0 }
+    }
+    @keyframes caret {
+        50% { border-right-color: transparent; }
+    }
+    #type{
+        font: bold 30% Consolas, Monaco, monospace;
+
+    }
+    #T_1 {
+        /*width: 8.25em;*/
+        width: 30ch;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: .05em solid;
+        animation: typing 3s steps(30),
+        caret 1s steps(1) infinite;
+    }
+    #T_2{
+        width: 12ch;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: .05em solid;
+        animation: typing 1.2s  steps(12),
+        caret 1s steps(1) infinite;
+        animation-delay:3s;
+
+    }
+    #T_3{
+        width: 13ch;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: .05em solid;
+        animation: typing 1.3s steps(13),
+        caret 1s steps(1) infinite;
+        animation-delay:4.2s;
+    }
+
+</style>
+<body>
+<div id="type">
+<h1 id="T_1">
+    Welcome to My personal blog...
+</h1>
+    <h1 id="T_2">
+        DawninShadow
+        </h1>
+    <h1 id="T_3">
+        LabMem No.404
+    </h1>
+</div>
+</body>
+</html>
