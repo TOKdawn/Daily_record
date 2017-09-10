@@ -1,9 +1,9 @@
-ÏêÏ¸ÄÚÈİ²ÎÕÕ[´Ë´¦](http://wowubuntu.com/markdown/#overview)
+è¯¦ç»†å†…å®¹å‚ç…§[æ­¤å¤„](http://wowubuntu.com/markdown/#overview)
 =============
 
 This is an H2
 -------------
-#±êÌâ
+#æ ‡é¢˜
 > This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
 > consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
 > Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
@@ -24,9 +24,8 @@ This is an H2
 <li>McHale</li>
 <li>Parish</li>
 </ol>
-ÕâÊÇÒ»¸öÆÕÍ¨¶ÎÂä£º
-
-    ÕâÊÇÒ»¸ö´úÂëÇø¿é¡£
+è¿™æ˜¯ä¸€ä¸ªæ™®é€šæ®µè½ï¼š
+```è¿™æ˜¯ä¸€ä¸ªä»£ç åŒºå—ã€‚```
 *****
 11111
 *****
@@ -52,18 +51,18 @@ _single underscores_
 
 __double underscores__
 Use the `printf()` function.
-\   ·´Ğ±Ïß
-`   ·´ÒıºÅ
-*   ĞÇºÅ
-_   µ×Ïß
-{}  »¨À¨ºÅ
-[]  ·½À¨ºÅ
-()  À¨»¡
-/#   ¾®×ÖºÅ
+\   åæ–œçº¿
+`   åå¼•å·
+*   æ˜Ÿå·
+_   åº•çº¿
+{}  èŠ±æ‹¬å·
+[]  æ–¹æ‹¬å·
+()  æ‹¬å¼§
+/#   äº•å­—å·
 
-/+   ¼ÓºÅ
+/+   åŠ å·
 
-/-   ¼õºÅ
+/-   å‡å·
 
-/.   Ó¢ÎÄ¾äµã<br/>
-/!   ¾ªÌ¾ºÅ
+/.   è‹±æ–‡å¥ç‚¹<br/>
+/!   æƒŠå¹å·
