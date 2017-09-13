@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>CSS特效文本效果篇</title>
 </head>
 <style>
 
@@ -13,11 +13,11 @@
         50% { border-right-color: transparent; }
     }
     @keyframes colorchange
-{
-0% {color:transparent;}/*动画开始样式*/
+    {
+        0% {color:transparent;}/*动画开始样式*/
 
-100% {color:#91f72e;}/*动画结束样式*/
-}
+        100% {color:#91f72e;}/*动画结束样式*/
+    }
     #type{
         font: bold 100% Consolas, Monaco, monospace;
         background-color: black;
@@ -54,20 +54,63 @@
         animation-delay:4.2s;
         color: transparent;
     }
+    header{
+        font: 250%/1.6 Baskerville, Palatino, serif;
+    }
+   header> p {
+        padding: .8em 1em;
+        background: hsl(210, 13%, 60%);
+        color: hsl(210, 13%, 30%);
+        text-shadow: 0 1px 1px hsla(0,0%,100%,.8);
+    }
 
+    header> p + p {
+        background: hsl(210, 13%, 30%);
+        color: hsl(210, 13%, 60%);
+        text-shadow: 0 -1px 1px black;
+    }
+    section{
+        background-color: #000011;
+    }
+    section >div{
+        color: white;
+        text-shadow: 0 1px hsl(0,0%,85%),
+        0 2px hsl(0,0%,80%),
+        0 3px hsl(0,0%,75%),
+        0 4px hsl(0,0%,70%),
+        0 5px hsl(0,0%,65%),
+        0 5px 10px black;
+        font: bold 500%/1 Rockwell, serif;
 
+    }
+    a {
+        color: #ffc;
+        text-decoration: none;
+        transition: 1s;
+        font: bold 500%/1 Rockwell, serif;
+    }
+
+    a:hover { text-shadow: 0 0 .1em, 0 0 .3em; }
 </style>
 <body>
 <div id="type">
-<h1 id="T_1">
-    Welcome to My personal blog...
-</h1>
+    <h1 id="T_1">
+        Welcome to My personal blog...
+    </h1>
     <h1 id="T_2">
         DawninShadow
-        </h1>
+    </h1>
     <h1 id="T_3">
         Have a good time
     </h1>
 </div>
+<header>
+    <p>凹凸感文字展示</p>
+    <p>凹凸感文字展示</p>
+</header>
+<section>
+    <div>立体文字</div>
+    <a>获得焦点发光</a>
+</section>
 </body>
 </html>

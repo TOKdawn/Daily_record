@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    div{
+
+        background-color: #1b1b1b;
+        color: #91f72e;
+    }
+    @keyframes typing {
+        from { width: 0 }
+    }
+    @keyframes caret {
+        50% { border-right-color: transparent; }
+    }
+</style>
+
+<body>
+<div id="text" >
+    <p>12345678910</p>
+    <p>12345</p>
+    <p>123</p>
+    <p>12</p>
+</div>
+<script>
+    window.onload = dawn_type('text',100);
+    function dawn_type(id,rate) {//rate为显示速率10为标准
+        var objarr=new Array();
+        var times=0;
+        var j=0;
+//        function sleep(numberMillis) {
+//            var now = new Date();
+//            var exitTime = now.getTime() + numberMillis;
+//            while (true) {
+//                now = new Date();
+//                if (now.getTime() > exitTime)
+//                    return;
+//            }
+//        }
+
+        //cssText="@keyframes typing {from { width: 0 }}@keyframes caret {50% { border-right-color: transparent; }}"
+        var obj = document.getElementById(id);
+        obj.style.fontFamily="Consolas, Monaco, monospace";
+        var p_num = obj.getElementsByTagName("p").length;
+        function begin() {
+
+            var p=obj.children[j];
+            var text_length=p.innerHTML.length;
+            console.log(text_length);
+            p.style.cssText="width: "+text_length+"ch;white-space: nowrap;overflow: hidden;border-right: .05em solid;animation: typing "+text_length*0.01*rate+"s steps("+text_length+"),caret 1s steps(1) infinite;";
+            j++;
+
+        }
+        for(var i=0;i<p_num;i++){
+            var p=obj.children[i];
+            var text_length=p.innerHTML.length;
+       //     objarr[i]=new Object();
+  //          objarr[i].css="width: "+text_length+"ch;white-space: nowrap;overflow: hidden;border-right: .05em solid;animation: typing "+text_length*0.01*rate+"s steps("+text_length+"),caret 1s steps(1) infinite;"
+//            objarr[i].time=text_length*0.01*rate;
+//            console.log(objarr[i].css);
+//            console.log(objarr[i].time);
+             p.style.cssText="width: "+text_length+"ch;white-space: nowrap;overflow: hidden;border-right: .05em solid;animation: typing "+text_length*0.01*rate+"s steps("+text_length+"),caret 1s steps(1) infinite;";
+            //console.log(times);
+            setTimeout(begin,times);
+            times+=text_length*rate*10;
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    div{
+
+        background-color: #1b1b1b;
+        color: #91f72e;
+    }
+    @keyframes typing {/*这部分回头也要集成到js里边去*/
+        from { width: 0 }
+    }
+    @keyframes caret {/*这部分回头也要集成到js里边去,由js统一设置*/
+        50% { border-right-color: transparent; }
+    }
+</style>
+
+<body>
+<div id="text" ><!--只要设置父级div的id,然后里边都用p标签就可以用了,做成的话还是挺酷炫的-->
+    <p>12345678910</p><!--p标签里别留空行-->
+    <p>12345</p>
+    <p>123</p>
+    <p>12</p>
+</div>
+<script>
+    window.onload = dawn_type('text',100);
+    function dawn_type(id,rate) {//rate为显示速率10为标准,越大越慢,越小越快
+        var objarr=new Array();//储存数据用
+        var times=0;//设置等待时间
+
+        //网上找的一个仿c/c++sleep函数,不好用QAQ
+//        function sleep(numberMillis) {
+//            var now = new Date();
+//            var exitTime = now.getTime() + numberMillis;
+//            while (true) {
+//                now = new Date();
+//                if (now.getTime() > exitTime)
+//                    return;
+//            }
+//        }
+            //往全局加css,当然失败了
+        //cssText="@keyframes typing {from { width: 0 }}@keyframes caret {50% { border-right-color: transparent; }}"
+        var obj = document.getElementById(id);//获取父级div的id
+        obj.style.fontFamily="Consolas, Monaco, monospace";
+        var p_num = obj.getElementsByTagName("p").length;//获取父元素里p标签个数
+        function begin(i) {//设置css
+            console.log(i);
+            p.style.cssText=objarr[i].css;
+
+        }
+        for(var i=0;i<p_num;i++){
+            var p=obj.children[i];
+            var text_length=p.innerHTML.length;//获取每个p标签里文本长度,以此设置css
+            objarr[i]=new Object();
+            //设置css
+            objarr[i].css="width: "+text_length+"ch;white-space: nowrap;overflow: hidden;border-right: .05em solid;animation: typing "+text_length*0.01*rate+"s steps("+text_length+"),caret 1s steps(1) infinite;"
+
+//            objarr[i].time=text_length*0.01*rate;
+//            console.log(objarr[i].css);
+//            console.log(objarr[i].time);
+          // p.style.cssText="width: "+text_length+"ch;white-space: nowrap;overflow: hidden;border-right: .05em solid;animation: typing "+text_length*0.01*rate+"s steps("+text_length+"),caret 1s steps(1) infinite;";
+            //console.log(times);
+            setTimeout(begin(i),times);//全是bugQAQ
+            times+=text_length*rate*10;
+        }
+    }
+</script>
+</body>
+</html>
