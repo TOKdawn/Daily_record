@@ -1,105 +1,116 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
-<title>jQuery自适应滑块轮播图插件zpSlide</title>
-<style type="text/css">
-html,body{
-	margin: 0;
-	padding: 0;
-}
-*{
-	box-sizing: border-box;
-}
-img{
-	max-width: 100%;
-}
-.zp-slide{
-	overflow: hidden;
-	position: relative;
-}
-.zp-slide>ul{
-	list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 1600%;
-    transition: all 0.3s;
-    transform: translate3d(0px, 0px, 0px);
-}
-.zp-slide>ul>li{
-	float: left;
-}
-[class^=zp-slide-]{
-	display: block;
-	position: absolute;
-	width: 30px;
-	height: 30px;
-	top: 50%;
-	margin-top: -15px;
-	left: 30px;
-	opacity: 0.5;
-}
-[class^=zp-slide-]:hover{
-	opacity: 1;
-}
-.zp-slide-right{
-	left: auto;
-	right: 30px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <title>jQuery自适应滑块轮播图插件zpSlide</title>
+    <style type="text/css">
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        * {
+            /* box-sizing: border-box; */
+        }
+        
+        img {
+            max-width: 100%;
+        }
+        
+        .zp-slide {
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .zp-slide>ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 1600%;
+            transition: all 0.3s;
+            transform: translate3d(0px, 0px, 0px);
+        }
+        
+        .zp-slide>ul>li {
+            float: left;
+        }
+        
+        [class^=zp-slide-] {
+            display: block;
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            top: 50%;
+            margin-top: -15px;
+            left: 30px;
+            opacity: 0.5;
+        }
+        
+        [class^=zp-slide-]:hover {
+            opacity: 1;
+        }
+        
+        .zp-slide-right {
+            left: auto;
+            right: 30px;
+        }
+    </style>
 </head>
 
 <body>
-<div class="zp-slide">
-    <ul>
-        <li>
-        	<a href="">
-        		<img src="images/a1.png" />
-        	</a>
-        </li>
-        <li>
-        	<a href="">
-        		<img src="images/a2.png" />
-        	</a>
-        </li>
-        <li>
-        	<a href="">
-        		<img src="images/a3.png" />
-        	</a>
-        </li>
-        <li>
-        	<a href="">
-        		<img src="images/a4.png" />
-        	</a>
-        </li>
-        <li>
-        	<a href="">
-        		<img src="images/a5.png" />
-        	</a>
-        </li>
-        <li>
-        	<a href="">
-        		<img src="images/a3.png" />
-        	</a>
-        </li>
-    </ul>
-    <a href="javascript:void(0)" class="zp-slide-left"><img src="images/zp-left.png"></a>
-    <a href="javascript:void(0)" class="zp-slide-right"><img src="images/zp-right.png"></a>
-</div>
+    <div class="zp-slide">
+        <ul>
+            <li>
+                <a href="">
+                    <img src="images/a1.png" />
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="images/a2.png" />
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="images/a3.png" />
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="images/a4.png" />
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="images/a5.png" />
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="images/a3.png" />
+                </a>
+            </li>
+        </ul>
+        <a href="javascript:void(0)" class="zp-slide-left"><img src="images/zp-left.png"></a>
+        <a href="javascript:void(0)" class="zp-slide-right"><img src="images/zp-right.png"></a>
+    </div>
 
-<script src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/zpslide.js" charset="utf-8"></script>
-<script type="text/javascript">
-$(function(){
-	$('.zp-slide').zpSlide({
-		//'original':1, //414px小屏幕，默认显示1个
-		'xs':1,       //640px小屏幕，默认显示2个，当前自定义显示1个
-		'sm':2,       //768px中屏幕，默认显示3个，当前自定义显示2个
-		'md':3,       //1024px中屏幕，默认显示4个，当前自定义显示3个
-		'lg':3        //1280px大屏幕，默认显示5个，当前自定义显示3个
-	});
-})
-</script>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/zpslide.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('.zp-slide').zpSlide({
+                //'original':1, //414px小屏幕，默认显示1个
+                'xs': 1, //640px小屏幕，默认显示2个，当前自定义显示1个
+                'sm': 2, //768px中屏幕，默认显示3个，当前自定义显示2个
+                'md': 3, //1024px中屏幕，默认显示4个，当前自定义显示3个
+                'lg': 3 //1280px大屏幕，默认显示5个，当前自定义显示3个
+            });
+        })
+    </script>
 </body>
+
 </html>
